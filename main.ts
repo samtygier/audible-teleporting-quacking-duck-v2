@@ -9,6 +9,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 function show_duck () {
     basic.showIcon(IconNames.Duck)
+    pins.digitalWritePin(DigitalPin.P8, 1)
     music.play(music.createSoundExpression(
     WaveShape.Square,
     325,
@@ -30,6 +31,7 @@ function show_duck () {
     SoundExpressionEffect.None,
     InterpolationCurve.Logarithmic
     ), music.PlaybackMode.UntilDone)
+    pins.digitalWritePin(DigitalPin.P8, 0)
 }
 input.onButtonPressed(Button.A, function () {
     if (hasDuck || ID == 1) {
