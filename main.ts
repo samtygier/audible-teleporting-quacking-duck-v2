@@ -51,9 +51,9 @@ let hasDuck = false
 let ID = 0
 let players = 0
 radio.setGroup(43)
-music.setVolume(64)
-players = 4
-ID = 3
+music.setVolume(255)
+players = 26
+ID = 9
 basic.showNumber(ID)
 if (ID == 1) {
     hasDuck = true
